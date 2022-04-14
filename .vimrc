@@ -35,8 +35,11 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'neomake/neomake'
+Plug 'dense-analysis/ale'
 
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf'
@@ -67,8 +70,6 @@ let g:gitgutter_sign_removed_above_and_below = '{'
 let g:gitgutter_sign_modified_removed = '~'
 
 let g:gitgutter_override_sign_column_highlight = 0
-
-call neomake#configure#automake('rw')
 
 map <C-f> :Ack<space>
 
