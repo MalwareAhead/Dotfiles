@@ -71,7 +71,9 @@ let g:gitgutter_sign_modified_removed = '~'
 
 let g:gitgutter_override_sign_column_highlight = 0
 
+map <C-e> :syntax on<CR>
 map <C-f> :Ack<space>
+map <C-l> :ALEToggle<CR>
 
 nnoremap <C-Up> :m-2<CR>
 nnoremap <C-Down> :m+<CR>
