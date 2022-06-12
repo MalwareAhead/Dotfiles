@@ -1,4 +1,6 @@
-syntax on
+set nocompatible
+filetype off
+syntax enable
 
 set noerrorbells
 set tabstop=2 softtabstop=2
@@ -7,6 +9,8 @@ set expandtab
 set smartindent
 set nu
 set ic
+set ai
+set si
 set nowrap
 set noeol
 set noshowmode
@@ -29,8 +33,8 @@ set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
+Plug 'vim-airline/vim-airline'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -40,14 +44,16 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'ervandew/supertab'
+
 Plug 'junegunn/fzf'
 Plug 'mileszs/ack.vim'
 
 call plug#end()
 
-filetype off
+filetype plugin indent on
 
 colorscheme nord
 
@@ -55,7 +61,6 @@ let g:airline_powerline_fonts = 1
 
 let g:NERDTreeShowHidden=1
 nnoremap <C-t> :NERDTreeToggle<CR>
-autocmd VimEnter * NERDTree
 
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=yellow
@@ -71,9 +76,10 @@ let g:gitgutter_sign_modified_removed = '~'
 
 let g:gitgutter_override_sign_column_highlight = 0
 
-map <C-e> :syntax on<CR>
 map <C-f> :Ack<space>
 map <C-l> :ALEToggle<CR>
+
+nnoremap <Space> i
 
 nnoremap <C-Up> :m-2<CR>
 nnoremap <C-Down> :m+<CR>
