@@ -158,8 +158,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+let g:airline_left_sep = "\uE0BC"
+let g:airline_right_sep = "\uE0BA"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
