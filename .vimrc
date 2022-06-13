@@ -21,8 +21,9 @@ set mouse+=a
 " leader is ','
 let mapleader=','
 
-" Save and quit all
+" Save and quit
 nmap <leader>m :xa<cr>
+nmap <leader>. :w<cr>
 
 " Turn on the Wild menu
 set wildmenu
@@ -37,6 +38,9 @@ set hid
 set number
 set backspace=indent,eol,start
 set nowrap
+
+" Hide current mode
+set noshowmode
 
 " Ignore case when searching
 set ignorecase
@@ -104,6 +108,12 @@ colorscheme nord
 set nobackup
 set nowb
 set noswapfile
+
+try
+    set undodir=~/.vim_runtime/temp_dirs/undodir
+    set undofile
+catch
+endtry
 
 set clipboard=unnamed
 
