@@ -5,9 +5,7 @@ export TERM='xterm-256color'
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
-
-ZSH_TMUX_AUTOSTART=true
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
