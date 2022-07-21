@@ -11,6 +11,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 alias reload='exec zsh'
-alias clr='clear'
+alias c='clear'
 
 neofetch
